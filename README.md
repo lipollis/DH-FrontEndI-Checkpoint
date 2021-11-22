@@ -1,3 +1,6 @@
+<div align="right"> <img src="https://github.com/lipollis/Imagens-Git/blob/main/sun%20-%20git.jpg" width="50px"/> </div>
+
+
 # Projeto Final de Front-end I da carreira CTD da Digital House
 
 - Projeto criado pelo grupo 1 da Turma 3 do Certified Tech Developer da Digital House como requisito obrigatório da matéria de Front-End I.
