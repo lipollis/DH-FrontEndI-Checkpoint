@@ -7,19 +7,21 @@
 - Basta acessar o github pages vinculado ao repositório.
 
 # 🛠️ Construído por
-- Aline Pollis
-- Andressa Dantas
-- Esther Pimentel
-- Giselle Piasetzki
-- Gustavo Barretto
-- Juan Ignacio Alcala
-- Leonardo Araújo Travessos
-- Letícia Carmo
-- Marcelo Massayukki Nader
-- Mia Arjona
-- Monique Cristina Cerqueira de Souza Mendes
-- Pedro Ivo
-- Vitor Galbier
+<ul>
+    <li><a href="https://github.com/lipollis"> Aline Pollis </a></li>
+    <li><a href=""> Andressa Dantas </a></li>
+    <li><a href="https://github.com/EstherPimentel"> Esther Pimentel </a></li>
+    <li><a href="https://github.com/GisellePiasetzki"> Giselle Piasetzki </a></li>
+    <li><a href="https://github.com/gustavobarretto"> Gustavo Barretto </a></li>
+    <li><a href="https://github.com/mandril29"> Juan Ignacio Alcala </a></li>
+    <li><a href="https://github.com/leonardo-at"> Leonardo Araújo Travessos </a></li>
+    <li><a href="https://github.com/liacarmo"> Letícia Carmo </a></li>
+    <li><a href="https://github.com/marcelonader"> Marcelo Massayukki Nader </a></li>
+    <li><a href="https://github.com/mia-arjona"> Mia Arjona </a></li>
+    <li><a href="https://github.com/Monique36"> Monique Mendes </a></li>
+    <li><a href="https://github.com/pedroisb"> Pedro Ivo </a></li>
+    <li><a href="https://github.com/VitorGalbier"> Vitor Galbier </a></li>
+</ul>
 
 
 ⌨️ com ❤️ 
