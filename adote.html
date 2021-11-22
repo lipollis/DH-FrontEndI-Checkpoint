@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./adote/css/styleadote.css">
+    <link rel="shortcut icon" href="./imgs/favIconPT.png" type="image/x-icon">
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap”
+        rel=“stylesheet”>
+    <title>Adote</title>
+</head>
+<body>
+    <!--5 itens do nav barra-->
+    <header>
+        <a href="./index.html"> <img src="./imgs/footer/logoFooter270x74px.png" alt="logo da Petinder" class="header-logo"></a>
+    </header>
+    <!--Formulário-->
+    <!-- LEMBRAR DE INSERIR A FONTE DA LETRA CONFORME O INDEX -->
+    <div class="formulario-adocao">
+        <h1>Finalize sua Adoção</h1>
+        <form action="">
+            <!--Usuário-->
+            <div class='form-login'>
+                <label for="usuário">Usuário</label>
+                <input type="text" id="usuário" maxlength="40" name="usuário" placeholder="Digite o e-mail cadastrado">
+            </div>
+            <!--senha-->
+            <div class='form-login'>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" minlength="8" maxlength="15" name="senha" placeholder="Digite sua senha">
+            </div>
+            <!--Nome do animal que quer adotar-->
+            <div class='friend-choice'>
+                <label>Seu novo amigo!</label>
+                <select name="novoAmigo" id="novoAmigo">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Beto</option>
+                    <option>Sol</option>
+                    <option>Kevin e Roger</option>
+                    <option>Robert</option>
+                    <option>Amora</option>
+                    <option>Tonho</option>
+                </select>
+            </div>
+            <!--telada ou não?-->
+            <div class='questions'>
+                <h3>Casa telada?</h3>
+                <input type="radio" id="Sim" name="telada" value="Sim" autocomplete='off'>
+                <label for="Sim">Sim</label>
+                <input type="radio" id="Não" name="telada" value="Não" autocomplete='off'>
+                <label for="Não">Não</label>
+            </div>
+            <!--Tem outros animais?-->
+            <div class='questions'>
+                <h3>Tem outros animais?</h3>
+                <input type="radio" id="Sim2" name="animais" value="Sim">
+                <label for="Sim2">Sim</label>
+                <input type="radio" id="Não2" name="animais" value="Não">
+                <label for="Não2">Não</label>
+            </div>
+            <!--Botões-->
+            <div>
+                <input class= 'bottom-adocao' type="submit" value="Adotar">
+                <input class= 'bottom-cancel' type="reset" value="Cancelar">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class='footer-copyright'>
+            <div>
+                <img src="./imgs/footer/logoFooter270x74px.png" alt="" class="footer-logo">
+            </div>
+            <p>Copyright 2021 • Petinder.com.br • Todos os direitos reservados.</p>
+        </div>
+        <div class=redes-sociais-site>
+            <img src="./imgs/footer/icon-Face-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-insta-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-twitter-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-yt-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-tel-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-whats-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-map-28x28px.png" alt="">
+            <img src="./imgs/footer/icon-mail-28x28px.png" alt="">
+            <p>www.petinder.com.br</p>
+        </div>
+    </footer>
+</body>
+</html>

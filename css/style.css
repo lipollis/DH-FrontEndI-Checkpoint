@@ -1,0 +1,2118 @@
+/* ------PADRÃO FEITO PARA DISPOSITIVO MOBILE DE 320px DE LARGURA  ------ */
+
+
+/* ----------------- Scroll Smooth e Fonte Size default  ----------------- */
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* ----------------- RESET  ----------------- */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: ‘Raleway’, sans-serif;
+}
+
+/* ----------------- VARIÁVEIS  ----------------- */
+:root{
+    --color-purple:rgb(93, 74, 166);
+    --color-red:rgb(187, 42, 48);
+    --color-yellow:rgb(242, 195, 67);
+}
+
+
+
+
+/* ----------------------- HEADER ------------------------------------------------------------- */
+
+
+/* ----------------- MENU LATERAL  ----------------- */
+
+header{
+    padding: 3rem;
+    background-color: var(--color-red);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+}
+
+.label-menu{
+    position: absolute;
+    z-index: 2;
+    animation: labelMenuNoChecked .5s;
+}
+
+.label-menu img{
+    width: 4rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+
+@keyframes labelMenuNoChecked {
+    20%{
+        transform:translateX(-50rem);
+    }
+    40%{
+        transform:translateY(-100rem);
+    }
+    60%{
+        transform:translateX(+200rem);
+    }    
+    80%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+    
+}
+
+
+
+.menu-lateral{
+    position: absolute;
+    top: 0;
+    left: -135%;
+    bottom: 0;
+    background-color: var(--color-yellow);
+    height: 100vh;
+    width: 90%;
+    border-right: .2rem solid rgb(255, 255, 255); 
+    transition: transform 1s cubic-bezier(0.75,-0.23, 0.26, 1.38);
+    z-index: 1;
+}
+
+.nav-menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu-lateral ul li{
+    border-bottom: .2rem solid rgba(0, 0, 0, 0.233);
+    height: 6rem;
+    transition: background-color .2s, margin-top 1s;
+    margin-top: 45rem;
+
+}
+
+.link-nav{
+    padding: 0 7rem;
+    color: var(--color-purple);
+    line-height: 6rem;
+    font-size: 1.6rem;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.div-imagem-perfil{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+    height: 8rem;
+    padding: 0 6rem 0 5rem;
+    align-items: center;
+    margin-top: 7.5rem;
+    background-color: var(--color-purple);
+    border-radius: 5% / 1rem;
+    /* border-bottom: .2rem solid #fff; */
+    margin-left: -100%;
+    transition: transform 1s ease-in-out;
+}
+
+.foto-perfil{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.nome-usuario{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-imagem-pets{
+    display: none;
+    width: 15rem;
+    height: 27rem;
+    position: absolute;
+    right: -9.6rem;
+    top: 20rem
+}
+
+.div-imagem-pets-logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0 1rem 3rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.nav-imagem-logo{
+    width: 20rem;
+    height: 7rem;
+
+}
+
+#checkbox-menu-lateral{
+    display: none;
+    
+}
+
+/* Início dos estilos aplicados quando o checkbox estiver ativo */
+
+#checkbox-menu-lateral:checked ~ .label-menu{
+    animation: labelMenuChecked .7s;
+}
+
+
+@keyframes labelMenuChecked {
+    20%{
+        transform:translateX(-50rem);
+    }
+    40%{
+        transform:translateY(-100rem);
+    }
+    60%{
+        transform:translateX(+200rem);
+    }    
+    80%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateX(0%);
+    }
+    
+}
+
+#checkbox-menu-lateral:checked ~.menu-lateral{
+    transform: translateX(137.6%);
+}
+
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li1{
+    margin-top: 0;
+    transition: margin-top .3s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li2{
+    margin-top: 0;
+    transition: margin-top .5s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li3{
+    margin-top: 0;
+    transition: margin-top .7s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li4{
+    margin-top: 0;
+    transition: margin-top .9s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li5{
+    margin-top: 0;
+    transition: margin-top 1.1s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral ul .nav-li6{
+    margin-top: 0;
+    transition: margin-top 1.3s ease-in-out;
+}
+#checkbox-menu-lateral:checked ~.menu-lateral .nav-menu-lateral .div-imagem-perfil{
+    transform: translateX(103%);
+}
+
+/* Fim dos estilos aplicados quando o checkbox estiver ativo */
+
+
+
+/* ----------------- CADASTRO ----------------- */
+
+.cadastro{
+    background-color: rgb(250, 160, 152);
+    height: 100vh;
+}
+
+
+/* ----------------------- MAIN ------------------------------------------------------------- */
+
+/* ----------------- ROLAGEM BACK TO TOP ----------------- */
+
+#rolagem-menu-superior a img{
+        position: fixed;
+        width: 4rem;
+        height: 7rem;
+        left: 1rem;
+        bottom: 1rem;
+        z-index: 2;
+        animation: rolagem 2s infinite;
+        opacity: .7;
+        
+}
+
+@keyframes rolagem {
+    10%{
+        transform:translateY(-5%);
+    }
+
+    40%{
+        transform:translateY(-10%);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+    
+}
+/* ----------------- SECTION HOME ----------------- */
+
+
+
+.home{
+    position:relative;
+    background: url('../imgs/tela1/front-view-of-beautiful-dog-with-copy-space-\(2\).png') no-repeat fixed;
+    background-color: var(--color-red);
+    background-position: bottom right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:30vh;
+    min-height: 100vh;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index:2;
+
+}
+
+.div-imgs-home-logo{
+    height: 75vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.div-imgs-home-logo p{
+    color: rgba(255, 255, 255, 0.753);
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    
+}
+.div-imgs-home-logo img{
+    width: 20rem;
+    height: 6rem;
+
+}
+.div-imgs-home-logo h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.div-home-button{
+    margin-top: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.div-home-button button{
+    width: 70%;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn-home-saibamais{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+}
+
+.btn-home-match{
+    background-color: #fff;
+    color: var(--color-purple);
+    border: none;
+    cursor: pointer;
+}
+
+.img-cachorro{
+    /* position: absolute;
+    bottom:0;
+    right: 0;
+    width: 17rem;
+    height: 17rem; */
+    display: none;
+}
+
+
+
+
+/* ----------------- SECTION MATCH ----------------- */
+
+
+
+.match{
+    background-color: #fff;
+    height: 100%;
+    border-top: 4rem solid var(--color-purple);
+}
+
+.match h2{
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.grid-imagem-pet{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    justify-items: center;
+    gap: 3rem;
+    padding: 4rem 0 4rem 0;
+}
+
+.imagem-pet{
+    width: 20rem;
+    height: 40rem;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem 1rem var(--color-purple);
+    background-color: #fff;
+}
+
+.imagem-pet img{
+    width: 100%;
+    height: 70%;
+    border-radius: 1rem;
+    cursor:pointer;
+}
+
+.div-nome-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    padding: 2rem;
+}
+
+.nome-pet{
+    color: var(--color-purple);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.descricao-pet{
+    border:none;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-purple);
+    cursor: pointer;
+}
+
+.div-nome-button p, .idade-pet, .raca-pet, .vacina-pet{
+    opacity: 0;
+    text-indent: -9999px;
+}
+.div-btn-adotar{
+    opacity: 0;
+}
+
+
+/* início da div individual de cada pet */
+
+.pet-beto{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+
+/* início do modal pet Beto */
+
+.modal-pet-beto{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pet-beto img{
+    width: 100%;
+    height: 50vh;
+}
+
+.modal-pet-beto .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pet-beto .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pet-beto .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-beto .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-beto .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-beto .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pet-beto .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* 
+.btn-adotar a:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+
+} */
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+/* 
+.btn-adotar a{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+    
+} */
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+}
+.modal-pet-beto .div-btn-adotar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    opacity: 1;
+}
+
+/* fim do modal pet Beto */
+
+
+.pet-tonho{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+
+/* início do modal pet Tonho */
+
+.modal-pet-tonho{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pet-tonho img{
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 50vh;
+}
+
+.modal-pet-tonho .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pet-tonho .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pet-tonho .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-tonho .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-tonho .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-tonho .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pet-tonho .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* 
+.btn-adotar a:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+
+} */
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+
+.btn-adotar{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+}
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.modal-pet-tonho .div-btn-adotar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    opacity: 1;
+}
+
+
+
+/* fim do modal pet Tonho */
+
+.pet-amora{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+
+/* início do modal pet Amora */
+
+.modal-pet-amora{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pet-amora img{
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 50vh;
+}
+
+.modal-pet-amora .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pet-amora .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pet-amora .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-amora .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-amora .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-amora .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pet-amora .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.btn-adotar:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+/* 
+.btn-adotar a{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+} */
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.modal-pet-amora .div-btn-adotar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    opacity: 1;
+}
+
+
+
+/* fim do modal pet Amora */
+
+
+
+.pet-robert{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+
+
+/* início do modal pet Robert */
+
+.modal-pet-robert{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pet-robert img{
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 50vh;
+}
+
+.modal-pet-robert .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pet-robert .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pet-robert .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-robert .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-robert .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-robert .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pet-robert .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* 
+.btn-adotar a:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+
+} */
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+/* 
+.btn-adotar a{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+} */
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+}
+.modal-pet-robert .div-btn-adotar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    opacity: 1;
+}
+
+
+
+/* fim do modal pet Robert */
+
+
+
+.pet-sol{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+
+/* início do modal pet Sol */
+
+.modal-pet-sol{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pet-sol img{
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 50vh;
+}
+
+.modal-pet-sol .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pet-sol .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pet-sol .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-sol .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-sol .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pet-sol .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pet-sol .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* 
+.btn-adotar a:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+
+} */
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+/* 
+.btn-adotar a{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+} */
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+}
+.modal-pet-sol .div-btn-adotar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    opacity: 1;
+}
+
+
+
+/* fim do modal pet Sol */
+
+
+
+
+.pets-kevin-roger{
+    overflow: hidden;
+    transition: width .5s, height .5s;
+}
+
+/* início do modal pets Kevin & Roger */
+
+.modal-pets-kevin-roger{
+    width: 90%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 95vh;
+    transition: width .5s, height .5s;
+}
+.modal-pets-kevin-roger img{
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%); */
+    height: 50vh;
+}
+
+.modal-pets-kevin-roger .div-nome-button{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30vh;
+}
+.modal-pets-kevin-roger .div-nome-button .nome-pet{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+.modal-pets-kevin-roger .div-nome-button .idade-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pets-kevin-roger .div-nome-button .vacina-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pets-kevin-roger .div-nome-button .raca-pet{
+    font-size: 1.6rem;
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 0;
+}
+.modal-pets-kevin-roger .div-nome-button .descricao-pet{
+    display: none;
+}
+.modal-pets-kevin-roger .div-nome-button p{
+    opacity: 1;
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding: 1rem 0 ;
+    text-indent: 0;
+}
+
+
+.btn-veroutro{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+/* 
+.btn-adotar a:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+
+} */
+.btn-veroutro:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+/* 
+.btn-adotar a{
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+} */
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+}
+.modal-pets-kevin-roger .div-btn-adotar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    opacity: 1;
+}
+
+
+
+/* fim do modal pets Kevin & Roger */
+
+
+
+
+/* fim da div individual de cada pet */
+
+
+
+
+
+/* ----------------- SECTION SOBRE ----------------- */
+
+
+
+.sobre{
+    background-color: var(--color-yellow);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-sobre{
+    height: 30%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.texto-sobre h2{
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    }
+
+.texto-sobre p{
+    color: var(--color-purple);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+/* início do mapa do Google Maps*/
+
+
+.sobre img{
+    width: 27rem;
+    height: 30%;
+    margin: auto;
+}
+
+iframe{
+    width: 100%;
+}
+
+/* fim do mapa do Google Maps*/
+
+
+
+
+/* ----------------- SECTION CONTATO ----------------- */
+
+
+.contato{
+    background-color: white;
+    height: 100%;
+    
+}
+
+.div-contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.div-contato h2 {
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 3rem;
+}
+
+.div-contato p {
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.form-contato-img {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: .1rem .1rem 1rem #696969;
+    gap: 3rem;
+    height: 50vh;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+}
+
+form label {
+    margin: 1rem;
+}
+
+form input {
+    border: none;
+    border-bottom: 1.5px solid var(--color-purple);
+    border-radius: 5%;
+    margin: 1rem;
+    outline-style: none;
+    color: var(--color-purple);
+}
+
+.form-contato-img img {
+    width: 100%;
+    height: 60%;
+    
+}
+.form-contato-img {
+    width: 75%;
+    height: 50rem;
+    
+}
+
+.div-buttons-contato{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.btn-contato-enviar {
+    background-color: var(--color-purple);
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    cursor:pointer;
+}
+
+.btn-contato-limpar {
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    cursor:pointer;
+}
+
+
+
+
+/* ----------------------- FOOTER ------------------------------------------------------------- */
+
+
+/* ----------------- SECTION CONTATO ----------------- */
+
+
+footer {
+    background-color: var(--color-purple);
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.footer-menu-link {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    font-size: 1.6rem;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    font-size: 1.6rem;
+}
+
+.redes-sociais-site {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .4rem;
+    font-size: 1.6rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.redes-sociais-site img {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1rem;
+    cursor:pointer;
+}
+
+
+
+
+
+/* ----------------- LOGIN ----------------- */
+
+.login{
+    background-color: rgb(220, 61, 251);
+    height: 100vh;
+    
+}
+
+.nav-li5 div{
+    display: none;
+    
+}
+
+
+.modal-nav-li .nav-li1{
+    height: 1rem;
+}
+.modal-nav-li .nav-li1 a{
+    display: block;
+    text-indent: -9999px;
+}
+.modal-nav-li .nav-li2{
+    height: 1rem;
+
+}
+.modal-nav-li .nav-li2 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+.modal-nav-li .nav-li3{
+    height: 1rem
+}
+.modal-nav-li .nav-li3 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+.modal-nav-li .nav-li4{
+    height: 1rem
+}
+.modal-nav-li .nav-li4 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+
+ul{
+    transition: height 2s, width 2s;
+}
+.modal-nav-li .nav-li5{
+    height: 40rem;
+    width: 123%;
+}
+.modal-nav-li .nav-li5 div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    
+}
+
+.modal-nav-li .nav-li5 div label{
+    margin: 1rem;
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.modal-nav-li .nav-li5 div input{
+    border: none;
+    border-bottom: 1.5px solid var(--color-purple);
+    border-radius: 5%;
+    /* margin: 1rem; */
+    padding: 1.2rem;
+}
+.modal-nav-li .nav-li5 div div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor:pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.modal-nav-li .nav-li5 div div .btn-login-entrar{
+    background-color: var(--color-purple);
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    cursor:pointer;
+}
+.modal-nav-li .nav-li5 div div .btn-esqueci-senha{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    cursor:pointer;
+}
+
+.modal-nav-li .nav-li6{
+    height: 1rem
+}
+.modal-nav-li .nav-li6 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+
+
+
+
+
+
+@media(min-width: 768px){
+    
+    html{
+        font-size: 70%;
+    }   
+
+    .menu-lateral {
+        position: absolute;
+        top: 0;
+        left: -88%;
+        bottom: 0;
+        background-color: var(--color-yellow);
+        height: 100vh;
+        width: 59%;
+        border-right: .2rem solid rgb(255, 255, 255);
+        transition: transform 1s cubic-bezier(0.75,-0.23, 0.26, 1.38);
+        z-index: 1;
+    }
+
+/* -------- Contato -------- */  
+    .contato{
+        height: 100vh;
+    }
+    .form-contato-img {
+        flex-direction: row;
+        width: 75%;
+        height: 26rem;
+        margin-top: 3rem;
+    }
+    
+    .div-contato{
+        margin-top: 2rem;
+    }
+    
+    form {
+        padding-left: 2rem;
+    }
+    
+    
+    .form-contato-img img {
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    
+    .div-buttons-contato{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10rem;
+        margin: 2rem 0;
+    }
+
+/* -------- Home -------- */
+
+
+.home{
+    position:relative;
+    background: url('../imgs/tela1/front-view-of-beautiful-dog-with-copy-space-\(2\).png') no-repeat fixed;
+    background-color: var(--color-red);
+    background-position: bottom right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:40vh;
+    min-height: 100vh;
+    bottom: 0;
+    right: 0;
+
+}
+
+.div-imgs-home-logo{
+    gap:.8rem;
+    width: 75%;
+}
+
+.div-imgs-home-logo img{
+    width: 30rem;
+    height: 9rem;
+}
+.div-imgs-home-logo h1{
+    font-size: 6rem;
+    color: white;
+}
+
+.div-home-button{
+    margin-top: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.div-home-button button{
+    width: 70%;
+    padding: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn-home-saibamais{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.img-cachorro{
+display: none;
+}
+
+
+/* -------- Match -------- */
+
+
+.modal-pet-beto .div-nome-button .nome-pet,
+.modal-pet-tonho .div-nome-button .nome-pet,
+.modal-pet-amora .div-nome-button .nome-pet,
+.modal-pet-robert .div-nome-button .nome-pet,
+.modal-pet-sol .div-nome-button .nome-pet,
+.modal-pets-kevin-roger .div-nome-button .nome-pet {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+/* -------- Sobre -------- */
+
+
+.texto-sobre{
+    gap:1.5rem;
+}
+.div-texto-imagem-sobre{
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem 0 2rem;
+}
+.div-texto-imagem-sobre img{
+    height: 100%;
+    width: 50%;
+    margin-bottom:0;
+}
+
+}
+
+
+@media(min-width: 1024px){
+    
+
+        html{
+            font-size: 90%;
+        } 
+
+        .nav-menu-lateral ul li{
+            margin-top: 30rem;
+        
+        }
+
+        .menu-lateral {
+            position: absolute;
+            top: 0;
+            left: -68%;
+            bottom: 0;
+            background-color: var(--color-yellow);
+            height: 100vh;
+            width: 46%;
+            border-right: .2rem solid rgb(255, 255, 255);
+            transition: transform 1s cubic-bezier(0.75,-0.23, 0.26, 1.38);
+            z-index: 1;
+        }
+
+        .nav-menu-lateral ul li{
+            border-bottom: .2rem solid rgba(0, 0, 0, 0.233);
+            height: 5rem;
+            transition: background-color .2s, margin-top 1s;
+            margin-top: 45rem;
+        
+        }
+
+        .link-nav{
+            padding: 0 7rem;
+            color: var(--color-purple);
+            line-height: 5rem;
+            font-size: 1.6rem;
+            width: 100%;
+            /* height: 100%; */
+        }
+        
+        .nav-imagem-logo{
+            width: 60%;
+            height: 20% 
+        }
+
+        .div-imagem-pets-logo {
+            margin-top: 3rem;
+        }
+/* -------- Contato -------- */
+
+        .form-contato-img {
+            flex-direction: row;
+            width: 75%;
+            height: 26rem;
+        }
+        
+        
+        form {
+            padding-left: 2rem;
+        }
+        
+        
+        .form-contato-img img {
+            width: 100%;
+            height: 100%;
+            
+        }
+        
+        
+        .div-buttons-contato{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10rem;
+            margin: 2rem 0;
+        }
+
+        .btn-contato-enviar {
+            padding: 1rem;
+            margin: 1rem;
+            width: 10rem;
+            font-size: 1.5rem;
+        }
+        
+        .btn-contato-limpar {
+
+            padding: 1rem;
+            margin: 1rem;
+            width: 10rem;
+            font-size: 1.5rem;
+        }
+/* -------- Home -------- */
+#rolagem-menu-superior{
+    display: none;
+}
+
+.home{
+    position:relative;
+    background: url('../imgs/tela1/front-view-of-beautiful-dog-with-copy-space-\(2\).png') no-repeat fixed;
+    background-color: var(--color-red);
+    background-position: bottom right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:45vh;
+    min-height: 100vh;
+    bottom: 0;
+    right: 0;
+
+}
+.div-imgs-home-logo{
+    gap:.7rem;
+    height: 70vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.div-imgs-home-logo img{
+    width: 30rem;
+    height: 9rem;
+
+}
+.div-imgs-home-logo h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.div-home-button {
+    display: flex;
+    flex-direction: row;
+}
+.div-home-button button{
+    width: 15rem;
+    padding: .8rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn-home-saibamais{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 300rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.img-cachorro{
+    /* position: absolute;
+    bottom:0;
+    right: 0;
+    width: 20rem;
+    height: 20rem; */
+    display: none;
+}
+
+/* -------- Match -------- */
+
+.modal-pet-beto .div-nome-button .nome-pet {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.modal-pet-tonho .div-nome-button .nome-pet,
+.modal-pet-amora .div-nome-button .nome-pet,
+.modal-pet-robert .div-nome-button .nome-pet,
+.modal-pet-sol .div-nome-button .nome-pet,
+.modal-pets-kevin-roger .div-nome-button .nome-pet {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.modal-pet-beto .div-nome-button .idade-pet,
+.modal-pet-tonho .div-nome-button .idade-pet,
+.modal-pet-amora .div-nome-button .idade-pet,
+.modal-pet-robert .div-nome-button .idade-pet,
+.modal-pet-sol .div-nome-button .idade-pet,
+.modal-pets-kevin-roger .div-nome-button .idade-pet {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.modal-pet-beto .div-nome-button .vacina-pet,
+.modal-pet-tonho .div-nome-button .vacina-pet,
+.modal-pet-amora .div-nome-button .vacina-pet,
+.modal-pet-robert .div-nome-button .vacina-pet,
+.modal-pet-sol .div-nome-button .vacina-pet,
+.modal-pets-kevin-roger .div-nome-button .vacina-pet {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.modal-pet-beto .div-nome-button .raca-pet,
+.modal-pet-tonho .div-nome-button .raca-pet,
+.modal-pet-amora .div-nome-button .raca-pet,
+.modal-pet-robert .div-nome-button .raca-pet,
+.modal-pet-sol .div-nome-button .raca-pet,
+.modal-pets-kevin-roger .div-nome-button .raca-pet {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.modal-pet-beto .div-nome-button .descricao-pet,
+.modal-pet-tonho .div-nome-button .descricao-pet,
+.modal-pet-amora .div-nome-button .descricao-pet,
+.modal-pet-robert .div-nome-button .descricao-pet,
+.modal-pet-sol .div-nome-button .descricao-pet,
+.modal-pets-kevin-roger .div-nome-button .descricao-pet {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.modal-pet-tonho .div-btn-adotar,
+.modal-pet-amora .div-btn-adotar,
+.modal-pet-robert .div-btn-adotar,
+.modal-pet-sol .div-btn-adotar,
+.modal-pets-kevin-roger .div-btn-adotar
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    opacity: 1;
+}
+
+.modal-pet-beto .div-btn-adotar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    opacity: 1;
+}
+
+
+.imagem-pet:hover{
+    transform: scale(1.1);
+    transition: transform .6s;
+}
+
+.imagem-pet img{
+    opacity: .5;
+}
+.imagem-pet img:hover{
+    opacity: 1;
+;
+}
+/* -------- Sobre -------- */
+
+/* -------- Footer -------- */
+
+}
+
+
+@media(min-width: 1280px){
+    
+
+        html{
+            font-size: 100%;
+        }   
+
+
+        .nav-menu-lateral ul li{
+            margin-top: 30rem;
+        
+        }
+
+        .menu-lateral {
+            position: absolute;
+            top: 0;
+            left: -59%;
+            bottom: 0;
+            background-color: var(--color-yellow);
+            height: 100vh;
+            width: 40%;
+            border-right: .2rem solid rgb(255, 255, 255);
+            transition: transform 1s cubic-bezier(0.75,-0.23, 0.26, 1.38);
+            z-index: 1;
+        }
+
+/* -------- Contato -------- */
+
+        .form-contato-img {
+            flex-direction: row;
+            width: 65%;
+            height: 26rem;
+        }
+        
+        
+        form {
+            padding-left: 2rem;
+        
+        }
+        
+        .contato{
+            height: 100%;
+        }
+
+        .form-contato-img img {
+            width: 100%;
+            height: 100%;
+            
+        }
+        
+        
+        .div-buttons-contato{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10rem;
+            margin: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+/* -------- Home -------- */
+
+.home{
+    position:relative;
+    background: url('../imgs/tela1/front-view-of-beautiful-dog-with-copy-space-\(2\).png') no-repeat fixed;
+    background-color: var(--color-red);
+    background-position: bottom right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:45vh;
+    min-height: 100vh;
+    bottom: 0;
+    right: 0;
+
+}
+
+.div-imgs-home-logo{
+    gap:2rem;
+    height: 65vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-imgs-home-logo img{
+    width: 30rem;
+    height: 9rem;
+}
+.div-imgs-home-logo h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.div-home-button {
+    display: flex;
+    flex-direction: row;
+}
+.div-home-button button{
+    width: 15rem;
+    padding: .8rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.btn-home-saibamais{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.btn-home-match{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.img-cachorro{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 20rem;
+    height: 20rem;
+}
+
+
+/* -------- Match -------- */
+
+
+/* -------- Sobre -------- */
+}

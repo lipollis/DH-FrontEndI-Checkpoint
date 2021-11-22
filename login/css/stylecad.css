@@ -1,0 +1,351 @@
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: ‘Raleway’, sans-serif;
+}
+
+/* ----------------- VARIÁVEIS  ----------------- */
+:root{
+    --color-purple:rgb(93, 74, 166);
+    --color-red:rgb(187, 42, 48);
+    --color-yellow:rgb(242, 195, 67);
+}
+
+/* ----------------------- HEADER ------------------------------------------------------------- */
+
+header{
+    padding: 2rem;
+    background-color: var(--color-yellow);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.header-logo {
+    width: 20rem;
+}
+
+
+/* ----------------------- Corpo ------------------------------------------------------------- */
+
+
+.formulario-cadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 9rem 7rem 4rem 7rem;
+    align-items: center;
+}
+
+form{
+    padding: 2rem ;
+    box-shadow: -.3rem -.3rem 1rem var(--color-purple);
+    margin-top: 5rem;
+}
+
+.formulario-cadastro h1 {
+    color: var(--color-purple)
+}
+
+.formulario-cadastro h3 {
+    color: var(--color-purple)
+}
+
+.formulario-cadastro label {
+    font-size: 1.6rem;
+}
+
+.form-login input {
+    border: none;
+    border-bottom: .15rem solid var(--color-purple);
+    outline-style: none;
+    color: var(--color-purple);
+}
+
+.formulario-cadastro form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-login {
+    color: var(--color-purple);
+    text-decoration: double;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+/*COPIA DO STYLE ADOTE - ADAPTAR*/
+
+/*  REVER PARTE INFERIOR DE BOTÕES CÃO OU GATO */
+
+.questions {
+    color: var(--color-purple);
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.questions h3{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.questions input {
+    display: none;
+}
+
+.questions input + label:before{
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: white;
+    border: .1rem solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .2rem;
+    margin-bottom: .3rem;
+}
+
+.questions input:checked + label:before{
+    background-color: white;
+    box-sizing: border-box;
+    border: .5rem solid rgb(93, 74, 166);
+    padding: .4rem;
+}
+
+/*  REVER PARTE SUPERIOR DE BOTÕES CÃO OU GATO */
+
+.bottom-enviar {
+    background-color: var(--color-purple);
+    border: .1rem solid var(--color-purple);
+    border-radius:2rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    cursor: pointer
+}
+
+.bottom-enviar:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+.bottom-cancelar:hover{
+    transform: scale(1.1);
+    transition: transform .3s cubic-bezier(0.2,-0.26, 0.93, 1.61);
+}
+
+.bottom-enviar:active,
+.bottom-cancelar:active {
+    transform: scale(0.9);
+    transition: .8s;
+    opacity: .8;
+}
+
+.bottom-enviar:active {
+    color: var(--color-yellow);
+}
+
+
+
+.bottom-cancelar:active {
+    color: var(--color-red);
+}
+
+/* TRANSIÇÃO DOS BOTÕES */
+
+.bottom-cancelar {
+    background-color: white;
+    border-bottom: none;
+    border: .1rem solid var(--color-purple);
+    
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    cursor: pointer
+}
+
+/* ----------------------- FOOTER ------------------------------------------------------------- */
+
+
+/* ----------------- SECTION CONTATO ----------------- */
+
+footer {
+    background-color: var(--color-purple);
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.footer-menu-link {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    font-size: 1.6rem;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    font-size: 1.6rem;
+}
+
+.redes-sociais-site {
+    color: rgba(255, 255, 255, 0.582);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .4rem;
+    font-size: 1.6rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.redes-sociais-site img {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+
+
+/* ----------------- LOGIN ----------------- */
+
+.login{
+    background-color: rgb(220, 61, 251);
+    height: 100vh;
+    
+}
+
+.nav-li5 div{
+    display: none;
+    
+}
+
+
+.modal-nav-li-cadastro .nav-li1{
+    height: 1rem;
+}
+.modal-nav-li-cadastro .nav-li1 a{
+    display: block;
+    text-indent: -9999px;
+}
+.modal-nav-li-cadastro .nav-li2{
+    height: 1rem;
+
+}
+.modal-nav-li-cadastro .nav-li2 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+.modal-nav-li-cadastro .nav-li3{
+    height: 1rem
+}
+.modal-nav-li-cadastro .nav-li3 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+.modal-nav-li-cadastro .nav-li4{
+    height: 1rem
+}
+.modal-nav-li-cadastro .nav-li4 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
+
+ul{
+    transition: height 2s, width 2s;
+}
+.modal-nav-li-cadastro .nav-li5{
+    height: 40rem;
+    width: 123%;
+}
+.modal-nav-li-cadastro .nav-li5 div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    
+}
+
+.modal-nav-li-cadastro .nav-li5 div label{
+    margin: 1rem;
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.modal-nav-li-cadastro .nav-li5 div input{
+    border: none;
+    border-bottom: 1.5px solid var(--color-purple);
+    border-radius: 5%;
+    /* margin: 1rem; */
+    padding: 1.2rem;
+}
+.modal-nav-li-cadastro .nav-li5 div div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor:pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.modal-nav-li-cadastro .nav-li5 div div .btn-login-entrar{
+    background-color: var(--color-purple);
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    cursor:pointer;
+}
+.modal-nav-li-cadastro .nav-li5 div div .btn-esqueci-senha{
+    background-color: transparent;
+    border: 1px solid var(--color-purple);
+    border-radius: 2rem;
+    color: var(--color-purple);
+    padding: 1rem;
+    margin: 1rem;
+    width: 20rem;
+    cursor:pointer;
+}
+
+.modal-nav-li-cadastro .nav-li6{
+    height: 1rem
+}
+.modal-nav-li-cadastro .nav-li6 a{
+    display: block;
+    height: 1rem;
+    text-indent: -9999px;
+}
