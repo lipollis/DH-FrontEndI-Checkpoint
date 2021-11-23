@@ -17,12 +17,6 @@
 - A proposta da equipe foi criar um site para promover a doação de animais, principalmente gatos e cachorros, em situação de abandono.
 
 
-
-# 🚀  Passar acessar o site
-- Basta acessar o github pages vinculado ao repositório.
-
-<div align="center"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="50px"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="50px"/> </div>
-
 # 🛠️ Construído por
 <ul>
     <li><a href="https://github.com/lipollis"> Aline Pollis </a></li>
