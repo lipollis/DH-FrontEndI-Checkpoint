@@ -1,10 +1,22 @@
 <div align="right"> <img src="https://github.com/lipollis/Imagens-Git/blob/main/sun%20-%20git.jpg" width="50px"/> </div>
 
+<h1 align="center"> Petinder </h1>
+<h2 align="center"> CHECKPOINT Front End I - CTD:Digital House </h2>
 
-# Projeto Final de Front-end I da carreira CTD da Digital House
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="50px"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="50px"/>
+  <br>
+  <br>
+  <a href="https://lipollis.github.io/DH-FrontEndI-Checkpoint/"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" /></a>
+</div>
+<br>
+<br>
 
 - Projeto criado pelo grupo 1 da Turma 3 do Certified Tech Developer da Digital House como requisito obrigatório da matéria de Front-End I.
 - A proposta da equipe foi criar um site para promover a doação de animais, principalmente gatos e cachorros, em situação de abandono.
+
+
 
 # 🚀  Passar acessar o site
 - Basta acessar o github pages vinculado ao repositório.
